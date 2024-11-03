@@ -39,12 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
               GradientText(
           "Facebook",
-          gradient: LinearGradient(
-            colors: [
-              ColorConst.BLUE1, 
-              ColorConst.BLUE2, 
-            ],
-          ),
+          gradient: custom_colorgrade(),
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
@@ -59,6 +54,15 @@ class _SplashScreenState extends State<SplashScreen> {
         Image.asset(ImageConst.METALOG)
       ]),
     ));
+  }
+
+  LinearGradient custom_colorgrade() {
+    return LinearGradient(
+          colors: [
+            ColorConst.PRIMARYBLUE, 
+            ColorConst.BLUE2, 
+          ],
+        );
   }
 }
 
