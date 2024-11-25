@@ -24,8 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ));
       },
     );
-    // TODO: implement initState
-    super.initState();
+        super.initState();
   }
   @override
   Widget build(BuildContext context) {
@@ -48,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
         SizedBox(height: 272),
         Text("From",style: TextStyle(
           fontSize: 14,
-          color: ColorConst.GREYSHDE
+          color: ColorConst.GREY1
         ),),
         SizedBox(height: 10),
         Image.asset(ImageConst.METALOG)

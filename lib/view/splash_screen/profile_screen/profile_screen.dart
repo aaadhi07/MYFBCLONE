@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_clone_fb/utilities/color_const.dart';
+import 'package:my_clone_fb/utilities/global_widget/custombutton_bar.dart';
 import 'package:my_clone_fb/utilities/image_const.dart';
 import 'package:my_clone_fb/view/joinfb_screen/joinfb_screen.dart';
+import 'package:my_clone_fb/view/login_screen/login_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -33,12 +35,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
              ),
              SizedBox(width: 16),
-             Text("Sanjay Shendy",
-             style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: ColorConst.BLACK
-             ),),
+             InkWell(
+              onTap: () {
+                
+              },
+               child: Text("Sanjay Shendy",
+               style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: ColorConst.BLACK
+               ),),
+             ),
              SizedBox(width: 90),
              Icon(Icons.more_vert,
              weight: 30,
@@ -53,9 +60,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Icon(Icons.add_box_outlined,
               size: 50,color: ColorConst.PRIMARYBLUE,),
               SizedBox(width: 16),
-              Text("Log Into Another Account",
-              style: TextStyle(color: ColorConst.PRIMARYBLUE,
-              fontSize: 12,fontWeight: FontWeight.w500),),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+                },
+                child: Text("Log Into Another Account",
+                style: TextStyle(color: ColorConst.PRIMARYBLUE,
+                fontSize: 12,fontWeight: FontWeight.w500),),
+              ),
               SizedBox(height:10)
             ],),),
             SizedBox(height: 19),
@@ -72,21 +84,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],),),
             SizedBox(height: 207),
             InkWell(
-              onTap:() {
+              onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => JoinfbScreen(),));
-              }, 
-              child: Container(
-                height: 40,
-                width: 300,
-                decoration: BoxDecoration(
-                  color: ColorConst.PRIMARYBLUE,
-                  borderRadius: BorderRadius.circular(15),
-                  ),
-                child: Center(
-                  child: Text("Create New Facebook Account",
-                  style:TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: ColorConst.WHITE) ,),
-                ),
-              ),
+              },
+              child: CustomButtonBar(
+                text: "Create New Facebook Account"),
             )
           ],
         )
@@ -94,3 +96,4 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
+
