@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_clone_fb/utilities/color_const.dart';
 import 'package:my_clone_fb/utilities/global_widget/custombutton_bar.dart';
+import 'package:my_clone_fb/view/login_screen/login_screen.dart';
 
 class TermsPrivacyScreen extends StatefulWidget {
   const TermsPrivacyScreen({super.key});
@@ -52,7 +53,11 @@ class _TermsPrivacyScreenState extends State<TermsPrivacyScreen> {
                   fontWeight: FontWeight.w400),),
                   ],),
                   SizedBox(height: 158),
-                  CustomButtonBar(text: "Sign UP"),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+                    },
+                    child: CustomButtonBar(text: "Sign UP")),
                   SizedBox(height: 20),
                   Text("Sign up without updating my contact",
                 style: TextStyle(

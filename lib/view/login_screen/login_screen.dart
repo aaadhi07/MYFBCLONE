@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_clone_fb/utilities/color_const.dart';
 import 'package:my_clone_fb/utilities/global_widget/custombutton_bar.dart';
 import 'package:my_clone_fb/utilities/image_const.dart';
+import 'package:my_clone_fb/view/fp_mobile_screen/fp_mobile_screen.dart';
 import 'package:my_clone_fb/view/home_screen/home_screen.dart';
 import 'package:my_clone_fb/view/joinfb_screen/joinfb_screen.dart';
 
@@ -28,9 +29,19 @@ class LoginScreen extends StatelessWidget {
          SizedBox(height: 50),
          InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
           },
           child: CustomButtonBar(text: "Log In")),
+          SizedBox(height: 20),
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => FpMobileScreen(),));
+            },
+            child: Text("Forgot Password?",
+            style: TextStyle(
+              fontSize: 14,color: ColorConst.PRIMARYBLUE,
+              fontWeight: FontWeight.bold),),
+          ),
          SizedBox(height: 87),
          Padding(
            padding: const EdgeInsets.symmetric(horizontal: 10),

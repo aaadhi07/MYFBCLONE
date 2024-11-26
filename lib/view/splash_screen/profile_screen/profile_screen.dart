@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_clone_fb/utilities/color_const.dart';
 import 'package:my_clone_fb/utilities/global_widget/custombutton_bar.dart';
 import 'package:my_clone_fb/utilities/image_const.dart';
+import 'package:my_clone_fb/view/home_screen/home_screen.dart';
 import 'package:my_clone_fb/view/joinfb_screen/joinfb_screen.dart';
 import 'package:my_clone_fb/view/login_screen/login_screen.dart';
 
@@ -27,17 +28,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
           padding: const EdgeInsets.only(left: 40,right: 39),
           child: Row(
             children: [
-             Container(
-              height: 60,width: 60,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(image: AssetImage(ImageConst.PROFILELOG))
-              ),
-             ),
+             Stack(
+              clipBehavior: Clip.none,
+               children:[ Container(
+                height: 60,width: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: AssetImage(
+                      ImageConst.PROFILELOG,),
+                      fit: BoxFit.cover)
+                ),),
+                Positioned(
+                  top: -5,
+                  right: -5,
+                  child: Container(
+                    height: 25,
+                    width: 25,
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      shape: BoxShape.circle
+                    ),
+                    child: Center(child: 
+                    Text("7"),),
+                  )
+                )
+               ]),
              SizedBox(width: 16),
              InkWell(
               onTap: () {
-                
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
               },
                child: Text("Sanjay Shendy",
                style: TextStyle(

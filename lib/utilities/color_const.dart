@@ -8,4 +8,5 @@ class ColorConst{
   static const BLACK=Color(0XFF000000);
   static const WHITE=Color(0XFFFFFFFF);
   static const GREY2=Color(0XFF999999);
+  static const WHITE2=Color(0XFFEEEEEE);
 }
