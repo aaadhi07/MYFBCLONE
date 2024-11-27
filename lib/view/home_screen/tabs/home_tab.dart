@@ -11,10 +11,11 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
+  
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 2,
       child: Column(
         children: [
           Padding(
@@ -57,7 +58,10 @@ class _HomeTabState extends State<HomeTab> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-            Image.asset(ImageConst.HOMEREEL),
+            InkWell(onTap: () {
+              
+            },
+              child: Image.asset(ImageConst.HOMEREEL)),
             Image.asset(ImageConst.HOMEROOM),
             Image.asset(ImageConst.HOMEGROUP),
             Image.asset(ImageConst.HOMELIVE),
@@ -68,13 +72,28 @@ class _HomeTabState extends State<HomeTab> {
             child: Row(
               children: List.generate(DummyDb.storyList.length, (index) => Column(
                 children: [
-                  Container(
-                    height: 135,width: 90,
-                    decoration: BoxDecoration(image: DecorationImage(image: AssetImage(DummyDb.storyList[index]["imageUrl"]))),
-                  )
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Stack(
+                      children:[ Container(
+                        height: 135,width: 90,
+                        decoration: BoxDecoration(image: DecorationImage(image: AssetImage(DummyDb.storyList[index]["imageUrl"]))),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        left: 30,
+                        child: CircleAvatar(radius: 14,backgroundColor: ColorConst.PRIMARYBLUE,
+                          child: CircleAvatar(radius: 12,
+                          backgroundImage: AssetImage(DummyDb.storyList[index]["imageUrl"]),),
+                        ),
+                      )
+                ]),
+                  ),
+                 SizedBox(height: 10),
+                 Text(DummyDb.storyList[index]["name"])
                 ],
               ),)
-            )
+            ),
           )
         ],
       ),
