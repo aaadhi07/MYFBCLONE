@@ -57,7 +57,7 @@ class _TermsPrivacyScreenState extends State<TermsPrivacyScreen> {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
                     },
-                    child: CustomButtonBar(text: "Sign UP")),
+                    child: CustomButtonBar(text: "Sign UP",height: 40,width: 300,)),
                   SizedBox(height: 20),
                   Text("Sign up without updating my contact",
                 style: TextStyle(

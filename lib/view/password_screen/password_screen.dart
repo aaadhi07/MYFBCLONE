@@ -51,7 +51,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) =>TermsPrivacyScreen() ,));
                     },
-                    child: CustomButtonBar(text: "Next"))
+                    child: CustomButtonBar(text: "Next",height: 40,width: 300,))
       ],),
     );
   

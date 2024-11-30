@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:my_clone_fb/utilities/color_const.dart';
 import 'package:my_clone_fb/utilities/global_widget/custombutton_bar.dart';
 import 'package:my_clone_fb/utilities/image_const.dart';
@@ -48,7 +47,7 @@ class _JoinfbScreenState extends State<JoinfbScreen> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => WhatsYourName(),));
               },
-              child: CustomButtonBar(text: "Next")),
+              child: CustomButtonBar(text: "Next",height: 40,width: 300,)),
             SizedBox(height: 130),
             InkWell(
               onTap: () {

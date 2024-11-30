@@ -51,7 +51,7 @@ class _ContactNumberScreenState extends State<ContactNumberScreen> {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => PasswordScreen(),));
                     },
-                    child: CustomButtonBar(text: "Next"))
+                    child: CustomButtonBar(text: "Next",height: 40,width: 300,))
       ],),
     );
   }

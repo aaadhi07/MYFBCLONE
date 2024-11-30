@@ -47,7 +47,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => GenderScreen(),));
                     },
-                    child: CustomButtonBar(text: "Next"))
+                    child: CustomButtonBar(text: "Next",height: 40,width: 300,))
                   
       ],) ,
     );

@@ -68,7 +68,7 @@ class _GenderScreenState extends State<GenderScreen> {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => ContactNumberScreen(),));
             },
-            child: CustomButtonBar(text: "Next"))
+            child: CustomButtonBar(text: "Next",height: 40,width: 300,))
       ],),
     );
   }

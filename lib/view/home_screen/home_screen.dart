@@ -28,44 +28,49 @@ class _HomeScreenState extends State<HomeScreen> {
           body: SafeArea(
             child: Expanded(
               // flex: ,
-              child: Column(
-                children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20,),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GradientText("Facebook", 
-                        gradient: LinearGradient(
-                          colors: [ColorConst.PRIMARYBLUE,ColorConst.BLUE2]), 
-                          style: GoogleFonts.raleway(fontSize: 20,fontWeight: FontWeight.bold)),
-                          Image.asset(ImageConst.messenger)
-                    ],),),
-                    TabBar(
-                      isScrollable: false,
-                      labelColor: ColorConst.PRIMARYBLUE,
-                      //  controller: _tabController,
-                      tabs: [
-                      Tab(icon: Icon(Icons.home_outlined),),
-                      Tab(icon: Icon(Icons.people_alt_outlined),),
-                      Tab(icon: Icon(Icons.person_outline),),
-                      Tab(icon: Icon(Icons.photo_camera_front),),
-                      Tab(icon: Icon(Icons.notifications_none),),
-                      Tab(icon: Icon(Icons.menu),)
-                    ]),
-                    SizedBox(height: 17),
-                    SizedBox(
-                      height: 600,
-                      child: TabBarView(children: [
-                        HomeTab(),
-                        FriendReqTab(),
-                        PersonalProfileTab(),
-                        WatchVedioTab(),
-                        NotificationTab(),
-                        MenuTab()
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20,),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        GradientText("Facebook", 
+                          gradient: LinearGradient(
+                            colors: [ColorConst.PRIMARYBLUE,ColorConst.BLUE2]), 
+                            style: GoogleFonts.raleway(fontSize: 20,fontWeight: FontWeight.bold)),
+                            Image.asset(ImageConst.messenger)
+                      ],),),
+                      TabBar(
+                        isScrollable: false,
+                        labelColor: ColorConst.PRIMARYBLUE,
+                        //  controller: _tabController,
+                        tabs: [
+                        Tab(icon: Icon(Icons.home_outlined),),
+                        Tab(icon: Icon(Icons.people_alt_outlined),),
+                        Tab(icon: Icon(Icons.person_outline),),
+                        Tab(icon: Icon(Icons.photo_camera_front),),
+                        Tab(icon: Icon(Icons.notifications_none),),
+                        Tab(icon: Icon(Icons.menu),)
                       ]),
-                    )
-              ],),
+                      SizedBox(height: 17),
+                      SizedBox(
+                        height: 600,
+                        child: TabBarView(
+                          physics: ScrollPhysics(),
+                          children: [
+                          HomeTab(),
+                          FriendReqTab(),
+                          PersonalProfileTab(),
+                          WatchVedioTab(),
+                          NotificationTab(),
+                          MenuTab()
+                        ]),
+                      )
+                ],),
+              ),
             ),
           ),
       ),

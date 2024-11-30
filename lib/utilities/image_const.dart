@@ -10,4 +10,6 @@ class ImageConst {
  static const   HOMEROOM = "asset/images/Chat room.png";
  static const   HOMEGROUP = "asset/images/Group (1).png";
  static const   HOMELIVE = "asset/images/Live.png";
+ static const   PROFILEBG = "asset/images/profileBg.png";
+ static const   PROFILEFULL = "asset/images/fullprofimg.png";
 }

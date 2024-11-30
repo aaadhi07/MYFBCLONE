@@ -63,7 +63,7 @@ class _WhatsYourNameState extends State<WhatsYourName> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => BirthdayScreen(),));
               },
-              child: CustomButtonBar(text: "Next"))
+              child: CustomButtonBar(text: "Next",height: 40,width: 300,))
           ],
         ),
       ),

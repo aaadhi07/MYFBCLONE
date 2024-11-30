@@ -51,7 +51,7 @@ class CreateNewPassScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) =>LoginScreen() ,));
                     },
-                    child: CustomButtonBar(text: "Log In"))
+                    child: CustomButtonBar(text: "Log In",height: 40,width: 300,))
       ],),
     );
   }

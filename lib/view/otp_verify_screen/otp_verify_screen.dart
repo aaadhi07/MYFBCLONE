@@ -47,7 +47,7 @@ class OtpVerifyScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => CreateNewPassScreen(),));
                     },
-                    child: CustomButtonBar(text: "Continue")),
+                    child: CustomButtonBar(text: "Continue",height: 40,width: 300,)),
                   SizedBox(height: 35),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 43),

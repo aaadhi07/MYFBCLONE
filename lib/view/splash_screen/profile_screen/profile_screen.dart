@@ -108,7 +108,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => JoinfbScreen(),));
               },
               child: CustomButtonBar(
-                text: "Create New Facebook Account"),
+                text: "Create New Facebook Account",height: 40,width: 300,),
             )
           ],
         )

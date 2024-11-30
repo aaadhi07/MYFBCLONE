@@ -37,7 +37,7 @@ class FpMobileScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => OtpVerifyScreen(),));
                   },
-                  child: CustomButtonBar(text: "Find Your Account")),
+                  child: CustomButtonBar(text: "Find Your Account",height: 40,width: 300,)),
                  SizedBox(height: 276),
                  InkWell(
                   onTap: () {
